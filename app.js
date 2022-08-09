@@ -4,7 +4,7 @@ const sectBtn = document.querySelectorAll(".control")
 const allSections = document.querySelector(".main-content")
 
 function pageTransitions(){
-    // button active class
+    // button click active class
     for (let i = 0; i < sectBtn.length; i++) {
         sectBtn[i].addEventListener('click', function(){
             let currentBtn = document.querySelectorAll(".active-btn")
@@ -13,8 +13,9 @@ function pageTransitions(){
         })
         
     }
-    // Sections Active
-    allSections.addEventListener("click", (e)=>{
+
+     // Sections Active
+     allSections.addEventListener("click", (e)=>{
         const id = e.target.dataset.id
         if (id) {
             // Remove selected from the other btns
@@ -33,7 +34,7 @@ function pageTransitions(){
         }
     })
 
-// Toggle theme
+    // Toggle theme
     const themeBtn = document.querySelector('.theme-btn')
     themeBtn.addEventListener('click', () =>{
         let element = document.body
